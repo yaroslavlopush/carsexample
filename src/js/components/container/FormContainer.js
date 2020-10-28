@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import Input from "../presentational/Input.js";
 import FetchMediumPrice from "../../api/fetchMediumPrice.js";
 import CreateBrandSelect from "../../api/createBrandSelect.js";
 import CreateModelSelect from "../../api/createModelSelect.js";
@@ -85,6 +83,3 @@ class FormContainer extends Component {
   }
 }
 export default FormContainer;
-
-const wrapper = document.getElementById("create-article-form");
-wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
