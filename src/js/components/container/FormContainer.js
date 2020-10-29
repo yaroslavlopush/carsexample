@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import FetchMediumPrice from "../../api/fetchMediumPrice.js";
 import CreateBrandSelect from "../../api/createBrandSelect.js";
 import CreateModelSelect from "../../api/createModelSelect.js";
+import ShowAppTheme from "../smallComponents/showAppTheme.js";
+import ChangeTheme from "../smallComponents/changeTheme.js";
 
 class FormContainer extends Component {
   constructor() {
@@ -57,6 +59,8 @@ class FormContainer extends Component {
   render() {
     return (
       <div>
+        <ShowAppTheme/>
+        <ChangeTheme/>
         <div className="mt-3" >
           <CreateBrandSelect
             choosedBrandLabel={this.state.choosedBrandLabel}
