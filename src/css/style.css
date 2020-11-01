@@ -1,0 +1,8 @@
+.theme {
+    display: flex;
+    justify-content: space-between;
+}
+
+.theme button {
+    cursor: pointer;
+}

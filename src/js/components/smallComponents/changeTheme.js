@@ -10,7 +10,7 @@ const ChangeTheme = () => {
   } 
   
   return (
-    <div>
+    <div className="theme">
         <button className="btn btn-dark mr-3 col-md-5" onClick={() => changeTheme('dark')}>Click to change theme to dark</button>
         <button className="btn btn-light col-md-5" onClick={() => changeTheme('default')}>Click to change theme to default</button>
     </div>
