@@ -1,21 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
-import { useSelector } from 'react-redux';
-
+import {useSelector, useDispatch} from 'react-redux';
+import { changeModelLabelAction, changeModelValueAction } from '../actions/actions';
 
 const CreateBrandSelect = () => {
-    const choosedBrandValue = useSelector(state => state.choosedBrandValue);
+    const [models, setModels] = useState([]);
+    const state = useSelector(state => state);
 
-    console.log(choosedBrandValue);
+    const dispatch = useDispatch()
+
+    useEffect (() => {
+        if (state.choosedBrandValue !== 0) {
+            fetch(`http://api.auto.ria.com/categories/1/marks/${state.choosedBrandValue}/models`)
+                .then(response => response.json())
+                .then((response) => setModels(response));
+        }
+    }, [state.choosedBrandValue])
+
+    function changeModel (choosedModelLabel, choosedModelValue) {
+        dispatch(changeModelLabelAction(choosedModelLabel))
+        dispatch(changeModelValueAction(choosedModelValue));
+    } 
 
     return (
-        <Select
-            value={{label : 'this.props.choosedModelLabel'}}
-            onChange={console.log('work')}
-            // options={this.props.models.map((option) => {
-            //     return {value: option.value, label: option.name}
-            // })}
-        />
+        <div>
+            <Select
+                value={{label : state.choosedModelLabel}}
+                onChange={(event) => changeModel(event.label, event.value)}
+                options={models.map((option) => {
+                    return {value: option.value, label: option.name}
+                })}
+            />
+        </div>
     )
 }
 

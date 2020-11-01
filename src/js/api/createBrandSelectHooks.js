@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 import {useSelector, useDispatch} from 'react-redux';
-import { changeMarkLabelAction, changeMarkValueAction } from '../actions/actions';
+import { changeBrandLabelAction, changeBrandValueAction } from '../actions/actions';
 
 
 const CreateBrandSelect = () => {
@@ -17,8 +17,8 @@ const CreateBrandSelect = () => {
   }, [])
 
   function changeMark (choosedBrandLabel, choosedBrandValue) {
-    dispatch(changeMarkLabelAction(choosedBrandLabel))
-    dispatch(changeMarkValueAction(choosedBrandValue));
+    dispatch(changeBrandLabelAction(choosedBrandLabel))
+    dispatch(changeBrandValueAction(choosedBrandValue));
   } 
 
   return (
