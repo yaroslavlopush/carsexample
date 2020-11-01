@@ -1,14 +1,12 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { changeThemeAction } from '../../actions/actions';
 
 const ChangeTheme = () => {
   const dispatch = useDispatch()
   
   function changeTheme (theme) {
-    dispatch({ 
-      type: 'CHANGE_THEME',
-      theme: theme
-    })
+    dispatch(changeThemeAction(theme))
   } 
   
   return (

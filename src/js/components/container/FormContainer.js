@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FetchMediumPrice from "../../api/fetchMediumPrice.js";
-import CreateBrandSelect from "../../api/createBrandSelect.js";
-import CreateModelSelect from "../../api/createModelSelect.js";
+import CreateBrandSelectHooks from "../../api/createBrandSelectHooks.js";
+import CreateModelSelect from "../../api/createModelSelectHooks.js";
 import ShowAppTheme from "../smallComponents/showAppTheme.js";
 import ChangeTheme from "../smallComponents/changeTheme.js";
 
@@ -62,9 +62,7 @@ class FormContainer extends Component {
         <ShowAppTheme/>
         <ChangeTheme/>
         <div className="mt-3" >
-          <CreateBrandSelect
-            choosedBrandLabel={this.state.choosedBrandLabel}
-            handleBrandSelect={(event) => this.handleBrandSelect(event)}/>
+          <CreateBrandSelectHooks />
         </div>
         <div className="mt-3" >
           <CreateModelSelect
