@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { changeThemeAction } from '../../actions/actions';
+import '../../../scss/app.scss';
 
 const ChangeTheme = () => {
   const dispatch = useDispatch()
