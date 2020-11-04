@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import GetMediumPrice from "../../api/GetMediumPrice.js";
-import CreateBrandSelectHooks from "../../api/createBrandSelectHooks.js";
-import CreateModelSelect from "../../api/createModelSelectHooks.js";
-import ShowAppTheme from "../smallComponents/showAppTheme.js";
-import ChangeTheme from "../smallComponents/changeTheme.js";
+import GetMediumPrice from "../automobile/GetMediumPrice.js";
+import CreateBrandSelectHooks from "../automobile/CreateBrandSelectHooks.js";
+import CreateModelSelect from "../automobile/CreateModelSelectHooks.js";
+import ShowAppTheme from "../theme/showTheme.js";
+import ChangeTheme from "../theme/changeTheme.js";
 
-class FormContainer extends Component {
+class mainPage extends Component {
   constructor() {
     super();
     
@@ -30,4 +30,4 @@ class FormContainer extends Component {
     );
   }
 }
-export default FormContainer;
+export default mainPage;

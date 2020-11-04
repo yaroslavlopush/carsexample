@@ -2,12 +2,20 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { changeThemeAction } from '../../actions/actions';
 import '../../../scss/app.scss';
+import {setTextColor, setBackgroundColor} from './colorsChanging';
 
 const ChangeTheme = () => {
-  const dispatch = useDispatch()
-  
+  const dispatch = useDispatch();
+
   function changeTheme (theme) {
     dispatch(changeThemeAction(theme))
+    if (theme === 'dark') {
+      setTextColor('white');
+      setBackgroundColor('black');
+    } else {
+      setTextColor('black');
+      setBackgroundColor('white');
+    }
   } 
   
   return (

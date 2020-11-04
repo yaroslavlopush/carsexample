@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 import {useSelector, useDispatch} from 'react-redux';
-import { changeModelLabelAction, changeModelValueAction } from '../actions/actions';
+import { changeModelLabelAction, changeModelValueAction } from '../../actions/actions';
 
 const CreateBrandSelect = () => {
     const [models, setModels] = useState([]);

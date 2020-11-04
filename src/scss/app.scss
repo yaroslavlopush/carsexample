@@ -1,3 +1,13 @@
+:root {
+    --color-text: black;
+    --color-background: white;
+}
+
+body {
+    color: var(--color-text);
+    background-color: var(--color-background);
+} 
+
 .theme {
     display: flex;
     justify-content: space-between;

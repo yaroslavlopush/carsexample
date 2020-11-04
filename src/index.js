@@ -1,4 +1,4 @@
-import FormContainer from "./js/components/container/FormContainer.js";
+import MainPage from "./js/components/container/MainPage.js";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Reducer from './js/reducers/Reducer'
@@ -9,7 +9,7 @@ const store = createStore(Reducer);
 
 ReactDOM.render(
   <Provider store={store}>
-    <FormContainer />
+    <MainPage />
   </Provider>,
 document.getElementById('create-article-form')
 );
