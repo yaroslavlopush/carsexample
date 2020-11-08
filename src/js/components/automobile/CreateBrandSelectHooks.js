@@ -17,8 +17,7 @@ const CreateBrandSelect = () => {
   }, [])
 
   function changeMark (choosedBrandLabel, choosedBrandValue) {
-    dispatch(changeBrandLabelAction(choosedBrandLabel))
-    dispatch(changeBrandValueAction(choosedBrandValue));
+    dispatch(changeBrandLabelAction({choosedBrandLabel, choosedBrandValue}));
   } 
 
   return (

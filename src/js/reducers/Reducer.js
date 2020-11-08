@@ -14,14 +14,14 @@ const Reducer = (state = initState, action) => {
       case CHANGE_THEME:
         return {
           ...state,
-          theme: action.theme
+          theme: action.payload
         };
 
       case CHANGE_BRAND_LABEL:
         return {
           ...state,
-          choosedBrandLabel: action.choosedBrandLabel
-        };
+          ...action.payload,
+      };
 
       case CHANGE_BRAND_VALUE:
         return {

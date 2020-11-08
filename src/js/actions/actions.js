@@ -7,14 +7,14 @@ export const CHANGE_MODEL_VALUE = 'CHANGE_MODEL_VALUE';
 export function changeThemeAction (theme) { 
   return {  
     type: CHANGE_THEME,
-    theme: theme
+    payload: theme
   }
 };
 
-export function changeBrandLabelAction (choosedBrandLabel) { 
+export function changeBrandLabelAction (obj) { 
   return {  
     type: CHANGE_BRAND_LABEL,
-    choosedBrandLabel: choosedBrandLabel
+    payload: obj
   }
 };
 
